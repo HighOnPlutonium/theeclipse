@@ -1,0 +1,38 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+
+
+# The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
+# Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
+license="MIT"
+
+
+[[mods]]
+modId="theeclipse"
+version="${file.jarVersion}"
+displayName="TheEclipse"
+# A file name (in the root of the mod JAR) containing a logo for display
+logoFile="theeclipse.png" #optional
+credits="Thanks to everyone who sees this"
+authors="Joel Kral" #optional
+
+
+description='''
+WORK IN PROGRESS
+
+seriously
+'''
+
+
+[[dependencies.theeclipse]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
