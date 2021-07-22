@@ -1,4 +1,6 @@
 {
      "item.theeclipse.test_item": "Test Item",
-     "itemGroup.modtab": "Eclipse Mod Tab"
+     "itemGroup.modtab": "Eclipse Mod Tab",
+     "effect.theeclipse.test_effect": "Test",
+     "enchantment.theeclipse.test": "Test"
 }
