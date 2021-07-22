@@ -1,11 +1,9 @@
 package joelkral.theeclipse;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -20,6 +18,7 @@ public class TheEclipse
 {
 	public static final String MOD_ID = "theeclipse";
     public static final Logger LOGGER = LogManager.getLogger();
+    public static final ItemGroup MOD_GROUP = new ModGroup("modtab");
 
     public TheEclipse() 
     {
@@ -33,17 +32,23 @@ public class TheEclipse
 
     private void setup(final FMLCommonSetupEvent event) 
     {
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+    	
     }
+    
+    public static class ModGroup extends ItemGroup 
+    {
 
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents {
-        @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) 
-        {
-            LOGGER.info("HELLO from Register Block");
-        }
+		public ModGroup(String label) 
+		{
+			super(label);
+		}
+
+		@Override
+		public ItemStack makeIcon() 
+		{
+			return ItemInit.TEST_ITEM.get().getDefaultInstance();
+		}
+    	
     }
 }
 
