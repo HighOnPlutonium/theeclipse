@@ -10,6 +10,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import joelkral.theeclipse.core.init.EnchantmentInit;
 import joelkral.theeclipse.core.init.ItemInit;
 
 
@@ -26,6 +27,7 @@ public class TheEclipse
         bus.addListener(this::setup);
         
         ItemInit.ITEMS.register(bus);
+        EnchantmentInit.ENCHANTS.register(bus);
         
         MinecraftForge.EVENT_BUS.register(this);
     }
