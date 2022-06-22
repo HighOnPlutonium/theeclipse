@@ -18,6 +18,7 @@ import org.apache.logging.log4j.Logger;
 import joelkral.theeclipse.core.init.EnchantmentInit;
 import joelkral.theeclipse.core.init.ItemInit;
 import joelkral.theeclipse.core.init.PotionInit;
+import joelkral.theeclipse.core.init.TileEntityTypeInit;
 
 
 @Mod(TheEclipse.MOD_ID)
@@ -36,6 +37,7 @@ public class TheEclipse
         EnchantmentInit.ENCHANTS.register(bus);
         PotionInit.EFFECTS.register(bus);
         PotionInit.POTIONS.register(bus);
+        TileEntityTypeInit.TILE_ENTITY_TYPES.register(bus);
         MinecraftForge.EVENT_BUS.register(this);
     }
 

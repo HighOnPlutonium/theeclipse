@@ -2,6 +2,7 @@ package joelkral.theeclipse.core.init;
 
 import joelkral.theeclipse.TheEclipse;
 import joelkral.theeclipse.common.items.TestItemTwoItem;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Rarity;
 import net.minecraftforge.fml.RegistryObject;
@@ -17,4 +18,8 @@ public class ItemInit
 	public static final RegistryObject<Item> TEST_ITEM_TWO = ITEMS.register("test_item_two", () -> new TestItemTwoItem(new Item.Properties().rarity(Rarity.EPIC).tab(TheEclipse.MOD_GROUP)));
 	
 	public static final RegistryObject<Item> YOUR_MUM = ITEMS.register("your_mum", () -> new Item(new Item.Properties().tab(TheEclipse.MOD_GROUP)));
+	
+	
+	
+	public static final RegistryObject<BlockItem> TEST_BLOCK = ITEMS.register("test_block", () -> new BlockItem(BlockInit.TEST_BLOCK.get(),new Item.Properties().tab(TheEclipse.MOD_GROUP)));
  }
