@@ -8,7 +8,7 @@ public class TrueDefEnchantment extends Enchantment
 {
 	public TrueDefEnchantment() 
 	{
-		super(Rarity.RARE, EnchantmentType.WEAPON, new EquipmentSlotType[]{EquipmentSlotType.MAINHAND});
+		super(Rarity.RARE, EnchantmentType.ARMOR, new EquipmentSlotType[]{EquipmentSlotType.MAINHAND});
 	}
 
     @Override

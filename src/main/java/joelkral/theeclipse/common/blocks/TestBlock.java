@@ -22,6 +22,4 @@ public class TestBlock extends Block
 	public TileEntity createTileEntity(BlockState state, IBlockReader world) {
 		return TileEntityTypeInit.TEST_TILE.get().create();
 	}
-	
-
 }
